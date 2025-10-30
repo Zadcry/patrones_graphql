@@ -95,7 +95,7 @@ app.add_middleware(
 
 
 # Montar la aplicación GraphQL en la ruta /graphql
-app.add_route("/graphql", graphql_app)
+app.mount("/graphql", graphql_app)  
 
 # Ruta raíz simple para verificar que el servidor funciona
 @app.get("/")
