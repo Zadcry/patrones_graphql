@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 // 1. Configuración de Apollo Client
 //    Apunta a la URL donde se está ejecutando tu backend de Python.
 const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql',
+  uri: '/graphql',
   cache: new InMemoryCache(),
 });
 

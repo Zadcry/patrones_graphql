@@ -77,8 +77,10 @@ app = FastAPI()
 
 # --- 2. CONFIGURACIÓN DE CORS (LA SOLUCIÓN) ---
 #    Define los orígenes que tienen permiso para conectarse.
+allowed_origin = os.environ.get("FRONTEND_URL", "http://localhost:3000")
+
 origins = [
-    "http://localhost:3000",  # El origen de tu app React
+    allowed_origin,
 ]
 
 #    Añade el middleware a la aplicación FastAPI
