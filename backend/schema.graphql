@@ -1,0 +1,29 @@
+# Este archivo define la "forma" de nuestra API de GraphQL.
+
+# 1. Tipo para los datos de Pokémon que expondremos
+type Pokemon {
+  id: ID!
+  name: String!
+  height: Int
+  weight: Int
+  base_experience: Int
+}
+
+# 2. Tipo para los datos de Estudiantes que expondremos
+type Student {
+  id: ID!
+  nombre: String!
+  carrera: String
+  semestre: String
+  promedio: String
+}
+
+# 3. Tipo Raíz de Consultas (Queries)
+#    Define los puntos de entrada para consultar datos.
+type Query {
+  "Consulta un Pokémon por su ID desde PokéAPI"
+  pokemon(id: ID!): Pokemon
+
+  "Consulta todos los estudiantes desde la base de datos de Supabase"
+  students: [Student!]!
+}

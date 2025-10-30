@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+ariadne
+httpx
+supabase
+python-dotenv
