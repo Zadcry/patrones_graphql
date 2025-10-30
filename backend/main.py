@@ -93,12 +93,4 @@ app.add_middleware(
 )
 # --- Fin de la configuración de CORS ---
 
-
-# Montar la aplicación GraphQL en la ruta /graphql
-app.mount("/graphql", graphql_app)  
-
-# Ruta raíz simple para verificar que el servidor funciona
-@app.get("/")
-def read_root():
-    return {"mensaje": "Servidor GraphQL funcionando. Visita /graphql"}
-
+app.mount("/", graphql_app)
